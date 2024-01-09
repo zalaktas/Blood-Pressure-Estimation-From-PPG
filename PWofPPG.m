@@ -1,4 +1,6 @@
-function [fw50_amplitude] = PWofPPG(ppg_signal,percentage,Fs,t)
+function [fw50_amplitude] = PWofPPG(ppg_signal,percentage)
+Fs = 1000;  % Sampling frequency in Hz
+t = linspace(0,2.1,2100); 
 
 % Find peaks in the PPG signal
 [peaks, peak_indices] = findpeaks(ppg_signal, 'MinPeakDistance', 0.6*Fs);  % Adjust MinPeakDistance as needed
@@ -20,7 +22,7 @@ for i = 1:length(peaks)
         % Calculate the pulse width at 50% amplitude
         fw50_amplitude(i) = t(index_after) - t(index_before);
         
-        % Plot the width at percentage of amplitude
+%         % Plot the width at percentage of amplitude
 %         figure;
 %         plot(t, ppg_signal, 'b', t(peak_indices), peaks, 'ro');
 %         hold on;
@@ -35,7 +37,7 @@ for i = 1:length(peaks)
     end
 end
 
-% % Display the pulse width at percentage of amplitude
+% Display the pulse width at percentage of amplitude
 % disp('Pulse Width at percentage Amplitude:');
 % disp(fw50_amplitude);
 

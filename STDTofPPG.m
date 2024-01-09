@@ -23,16 +23,6 @@ if( (length(mlocs) < length(plocs)) && (plocs(1) < mlocs(1)) )
     end
 end
 
-%new
-if( (length(mlocs) < length(plocs)) && (plocs(1) > mlocs(1)) )
-    ST = zeros(length(mlocs),1);
-    DT = zeros(length(mlocs),1);
-    for i = 1: length(mlocs)-1
-        ST(i) = plocs(i) - mlocs(i);
-        DT(i) = mlocs(i+1) - plocs(i);
-    end
-end
-
 if( (length(mlocs) == length(plocs)) && (plocs(1) < mlocs(1)) )
     ST = zeros(length(mlocs)-1,1);
     DT = zeros(length(mlocs)-1,1);
