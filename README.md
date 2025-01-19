@@ -31,10 +31,3 @@ This project introduces a **Cuffless Blood Pressure Monitoring System** designed
 ## Key Results
 - Successfully integrated hardware and software for continuous blood pressure monitoring.
 - Achieved low prediction errors with machine learning models (RMSE: 10.4 mmHg for systolic, 10.2 mmHg for diastolic).
-
-## Repository
-Access the project [here](https://github.com/zalaktas/Blood-Pressure-Estimation-From-PPG).
-
----
-
-Let me know if you'd like to add or modify any section!
